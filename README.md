@@ -20,26 +20,26 @@ O `-y` significa **yes for all** (sim para tudo), ou seja, não vai haver nenhum
 
 É um arquivo no formato de JSON (JavaScript Object Notation).
 
-```json
+```js
 {
-	// Abrimos um objeto JS
-	// A propriedade sempre será envolvidas com aspas duplas
-	// Em seguida, dois pontinhos
-	// E finalmente seu valor
-	"name": "whatever",
-	// Caso tenha um segundo pacote npm, com o mesmo nome pode haver um conflito
-	"version": "1.0.0",
-	"main": "index.js", 
+  // Abrimos um objeto JS
+  // A propriedade sempre será envolvidas com aspas duplas
+  // Em seguida, dois pontinhos
+  // E finalmente seu valor
+  "name": "whatever",
+  // Caso tenha um segundo pacote npm, com o mesmo nome pode haver um conflito
+  "version": "1.0.0",
+  "main": "index.js", 
   // esse aqui é o ponto de entrada, onde estará o código principal
-	"scripts": {
-		"dev": "node src/file.js"
-    // aqui temos os scripts, digamos que é uma outra maneira de escrevermos comandos no terminal
-	},
-	"author": "Matheus",
-	"license": "ISC",
-	"keywords": [],
-	"description": ""
-}
+  "scripts": {
+    "dev": "node src/file.js"
+  // aqui temos os scripts, digamos que é uma outra maneira de escrevermos comandos no terminal
+  },
+     "author": "Matheus",
+     "license": "ISC",
+     "keywords": [],
+     "description": ""
+  }
 ```
 
 # Instalando dependências
@@ -55,9 +55,9 @@ Vemos que foi iniciado um diretório chamado `node_modules`, e mais um arquivo c
 E também houve uma adição de código no package.json:
 
 ```json
-  "dependencies": {
-    "cfonts": "^3.1.1"
-  }
+"dependencies": {
+  "cfonts": "^3.1.1"
+}
 ```
 
 Foi adicionado um a propriedade para as dependências, então, cada dependências instalada pelo npm, será adicionada aí.
@@ -69,9 +69,9 @@ Ou também podemos instalar como `Dependência de Desenvolvimento`:
 > npm i cfonts -D
 
 ```json
-  "devDependencies": {
-      "cfonts": "^3.1.1"
-    }
+"devDependencies": {
+  "cfonts": "^3.1.1"
+}
 ```
 
 Isso significa que, a dependência será usada apenas em um ambiente de desenvolvimento, ou seja, que são necessárias para o programador desenvolver mas não é necessário a distribuição.
@@ -88,7 +88,7 @@ Entretanto, o projeto será distribuído para outras pessoas, mas sem o node_mod
 
 # Package-lock
 
-O `package-log` é do formato **.json**, e não é necessário mexer nele enquanto desenvolve, pois ele é responsável por mapear as dependências do seu projeto.
+O `package-lock.json` é do formato **.json**, e não é necessário mexer nele enquanto desenvolve, pois ele é responsável por mapear as dependências do seu projeto.
 
 # Criando scripts para rodar no npm via terminal
 
@@ -118,7 +118,7 @@ E para saber onde se encontra o tal dependência global, usamos o código, `npm 
 
 Depois de instalarmos o módulo `moment`, iremos analisar as versões dele:
 
-```json
+```js
 {
   "dependencies": {
     "moment": "^2.29.4"
